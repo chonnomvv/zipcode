@@ -27,9 +27,9 @@ public class CommandController extends HttpServlet {
 		// TODO Auto-generated method stub
 		request.setCharacterEncoding("UTF-8");
 
-		String cmd = request.getParameter("cmd");
-		cmd = cmd == null ? "" : cmd;
-		System.out.println(cmd);
+			String cmd = request.getParameter("cmd");
+			cmd = cmd == null ? "" : cmd;
+			System.out.println(cmd);
 		String url = "./mvc/home.jsp";
 		if (cmd.equals("searchDong")) {
 			String dong = request.getParameter("dong");
@@ -93,17 +93,6 @@ public class CommandController extends HttpServlet {
 			request.setAttribute("result", vo);
 		} else if (cmd.equals("viewIdCheck")) {
 			url = "./mvc/id_check.jsp";
-		} else if (cmd.equals("search")) {
-			String id = request.getParameter("id");
-			MemberDAO dao = new MemberDAO();
-			MemberVO vo = dao.select(id);
-			request.setAttribute("vo", vo);
-			url = "./mvc/regist_member.jsp";
-		} else if (cmd.equals("searchAll")) {
-			url = "./mvc/list.jsp";
-			MemberDAO dao = new MemberDAO();
-			ArrayList<MemberVO> list = dao.selectAll();
-			request.setAttribute("list", list);
 		} else if (cmd.equals("viewIdService")) {
 			url = "./mvc/id_service.jsp";
 		} else if (cmd.equals("update_member")) {

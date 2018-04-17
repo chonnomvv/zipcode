@@ -1,0 +1,2 @@
+/search.do=kr.co.bit.handler.SearchHandler
+/searchAll.do=kr.co.bit.handler.SearchAllHandler

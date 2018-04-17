@@ -21,9 +21,9 @@
 	%>
 	Home
 	<div id="msg"><%=message%></div>
-	<a href="./command?cmd=viewRegist">등록</a>
-	<a href="./command?cmd=searchAll">전체조회</a>
-	<form action="./command?cmd=search" method="post">
+	<a href="./command?cmd=viewRegist" method="post">등록</a>
+	<a href="./searchAll.do" method="post">전체조회</a>
+	<form action="./search.do" method="post">
 		<input type="text" name="id"> <input type="submit"
 			value="부분조회">
 			
